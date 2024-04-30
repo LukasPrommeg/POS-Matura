@@ -1,3 +1,18 @@
+# Inhalt
+- [Search](#search)
+- [Edit](#edit)
+- [Delete](#delete)
+- [OwnerUser](#owneruser)
+- [Validation](#validation)
+- [DTOs](#dtos)
+- [ViewData](#viewdata)
+- [SQLiteDB](#sqlitedb)
+- [E-Mail](#email)
+- [Formstyling](#formstyling)
+- [Logincheck](#logincheck)
+- [Navbarlink](#Navbarlink)
+- [Seitentitel](#seitentitel)
+- [Partial](#partial)
 # Search
 ## onChange
 Mit JavaScript
@@ -144,7 +159,7 @@ Im View
 ```c#
 <select asp-for="Sterne" form-control" asp-items="@((IEnumerable<SelectListItem>)ViewData["Kategorien"])"></select>
 ```
-# SQLite-DB
+# SQLiteDB
 1. Nugets installieren
 	- Core.Design
 	- Core.Sqlite
@@ -179,9 +194,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite
    
 5. Datenbank aufsetzen
    Wie immer add-migration und update-database
-# E-Mail
+# EMail
 Beim Input einer Email als type "email" verwenden. Dieser übernimmt automatisch die Validierung! 
-# Styling von Formularen
+# Formstyling
 
 ```html
 <form asp-controller="controller" asp-action="function" enctype="multipart/form-data">
@@ -211,7 +226,7 @@ Beim Input einer Email als type "email" verwenden. Dieser übernimmt automatisch
 </form>
 
 ```
-# Unterschied zwischen Eingelogt oder nicht
+# Logincheck
 ```c#
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
@@ -224,7 +239,7 @@ else {
 	//Code when not signed in
 }
 ```
-# Link in Navbar
+# Navbarlink
 Bei Unterschied zwischen eingelogt oder nicht:
 in LoginPartial.cshtml Element hinzufügen
 
